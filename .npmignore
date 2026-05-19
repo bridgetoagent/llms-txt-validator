@@ -1,0 +1,14 @@
+src
+test
+.github
+.gitignore
+.npmignore
+tsconfig.json
+tsup.config.ts
+vitest.config.ts
+node_modules
+coverage
+*.log
+.env*
+CONTRIBUTING.md
+.claude

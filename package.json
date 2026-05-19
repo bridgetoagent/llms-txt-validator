@@ -1,0 +1,63 @@
+{
+  "name": "@bridgetoagent-com/llms-txt-validator",
+  "version": "0.1.0",
+  "description": "Validator for llms.txt — checks parser conformance against the llmstxt.org reference spec, link reachability, and missing sections.",
+  "keywords": [
+    "llms.txt",
+    "llms-txt",
+    "validator",
+    "linter",
+    "ai-agents",
+    "agentic-web",
+    "llmstxt"
+  ],
+  "homepage": "https://www.bridgetoagent.com/tools/llms-txt-validator",
+  "bugs": {
+    "url": "https://github.com/bridgetoagent/llms-txt-validator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bridgetoagent/llms-txt-validator.git"
+  },
+  "license": "MIT",
+  "author": "BridgeToAgent editorial (https://www.bridgetoagent.com)",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "llms-txt-validator": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run lint && npm run test && npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@vitest/coverage-v8": "^1.2.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  }
+}
